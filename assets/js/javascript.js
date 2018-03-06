@@ -1,18 +1,28 @@
 // array to hold the animals which will be searched for
 
-var animals = ["Cat", "Dog", "Hamster", "Penguin", "Owl", "Capabara"];
+var animals = ["Cat", "Dog", "Hamster", "Penguin", "Owl", "Capybara", "Panda", "Otter", "Fox", "Goat", "Cow"];
 
 // Create ajax request to giphy
 function displayGIF() {
   // Giphy API Key = "lTJj9ZkaK1SV3zfcpyVEhc9Okz6T5pxC"
   var animal = $(this).attr("data-name");
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=lTJj9ZkaK1SV3zfcpyVEhc9Okz6T5pxC"
+  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&limit=10&api_key=lTJj9ZkaK1SV3zfcpyVEhc9Okz6T5pxC"
 
   $.ajax({
     url: queryURL,
     method: "GET"
     }).then(function(response) {
     console.log(response);
+	//Creating a loop to go through the response and create an img tag with each URL
+	
+	// for (var j = 0; j < response.length; j++){
+	    var imageURL = response.data[0].url;
+	    console.log(imageURL);
+	 //    console.log(j);
+		// }
+		$("#image-view").append("<img src=" + imageURL + ">")
+
+
     });
   }	
 
@@ -41,7 +51,7 @@ $("#add-image").on("click", function(event) {
 });
 
 displayButtons();
-displayGIF();
+$(document).on("click", ".animal-btn", displayGIF);
 
 
 
