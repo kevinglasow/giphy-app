@@ -6,5 +6,6 @@ input {
 }
 
 body {
-	background-image: url("../images/confectionary.png")
+	background-image: url("../images/confectionary.png");
+	font-family: 'Raleway', sans-serif;
 }

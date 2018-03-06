@@ -1,6 +1,6 @@
 // array to hold the animals which will be searched for
 
-var animals = ["Cat", "Dog", "Hamster", "Penguin", "Owl", "Capybara", "Panda", "Otter", "Fox", "Goat", "Cow"];
+var animals = ["Cat", "Dog", "Hamster", "Penguin", "Owl", "Capybara", "Panda", "Otter", "Fox", "Goat", "Cow", "Octopus", "Dolphin", "Crow", "Elephant"];
 
 // Create ajax request to giphy
 function displayGIF() {
@@ -15,11 +15,11 @@ function displayGIF() {
     console.log(response);
 	//Creating a loop to go through the response and create an img tag with each URL
 	
-	// for (var j = 0; j < response.length; j++){
-	    var imageURL = response.data[0].url;
+	for (var j = 0; j < response.data.length; j++){
+	    var imageURL = response.data[j].images.fixed_height.url;
 	    console.log(imageURL);
-	 //    console.log(j);
-		// }
+	    console.log(j);
+		}
 		$("#image-view").append("<img src=" + imageURL + ">")
 
 
