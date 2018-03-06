@@ -19,10 +19,8 @@ function displayGIF() {
 	    var imageURL = response.data[j].images.fixed_height.url;
 	    console.log(imageURL);
 	    console.log(j);
-		}
 		$("#image-view").append("<img src=" + imageURL + ">")
-
-
+		}
     });
   }	
 
