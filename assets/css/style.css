@@ -1,7 +1,8 @@
 button,
 div,
 form,
-input {
+input,
+img {
   margin: 10px;
 }
 
