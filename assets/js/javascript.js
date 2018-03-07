@@ -5,7 +5,7 @@ var animals = ["Cat", "Dog", "Hamster", "Penguin", "Owl", "Capybara", "Panda", "
 // Create ajax request to giphy
 function displayGIF() {
   var animal = $(this).attr("data-name");
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&limit=10&api_key=lTJj9ZkaK1SV3zfcpyVEhc9Okz6T5pxC"
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&limit=10&api_key=lTJj9ZkaK1SV3zfcpyVEhc9Okz6T5pxC"
 
   $.ajax({
     url: queryURL,
