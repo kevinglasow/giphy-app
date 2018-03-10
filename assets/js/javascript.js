@@ -1,3 +1,9 @@
+// Psudocode to-do list:
+// Create a varriable for the rating of each gif equal to its location in the array
+// JS create a div below each image created
+// Add a paragraph tag to that div that contains the rating
+// Update profile to include a link to this app
+
 // array to hold the animals which will be searched for
 
 var animals = ["Cat", "Dog", "Hamster", "Penguin", "Owl", "Capybara", "Panda", "Otter", "Fox", "Goat", "Cow", "Octopus", "Dolphin", "Crow", "Elephant"];
